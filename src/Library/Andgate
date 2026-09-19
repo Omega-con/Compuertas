@@ -1,0 +1,16 @@
+public class And
+{
+    private Logic input1;
+    private Logic input2;
+
+    public And(Logic input1, Logic input2)
+    {
+        this.input1 = input1;
+        this.input2 = input2;
+    }
+
+    public Result Value
+    {
+        get { return new Result(input1.Value && input2.Value); }
+    }
+}

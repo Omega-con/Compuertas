@@ -1,0 +1,7 @@
+public class True : Logic
+{
+    public bool Value
+    {
+        get { return true; }
+    }
+}
