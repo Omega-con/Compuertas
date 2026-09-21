@@ -1,0 +1,14 @@
+[TestMethod]
+static void TestAndCompuerta_TrueYTrue_DevuelveTrue()
+{
+    // Arrange (Preparación)
+    Logic entradaA = new True();
+    Logic entradaB = new True();
+    Logic compuertaAnd = new Andgate(entradaA, entradaB);
+
+    // Act (Ejecución)
+    bool resultado = compuertaAnd.Value;
+
+    // Assert (Verificación)
+    Assert.IsTrue(resultado);
+}
