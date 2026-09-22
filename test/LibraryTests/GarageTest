@@ -1,0 +1,17 @@
+static void Main(string[] args)
+{
+    Logic t = new True();
+    Logic f = new False();
+
+    Console.WriteLine("--- PRUEBAS GARAGE GATE ---");
+
+    Logic garage1 = new GarageGate(f, f, f);
+    Console.WriteLine($"Caso 1 (F,F,F) -> Obtenido: {garage1.Value}");
+
+    Logic garage2 = new GarageGate(f, f, t);
+    Console.WriteLine($"Caso 2 (F,F,T) -> Obtenido: {garage2.Value}");
+
+    Logic garage3 = new GarageGate(f, t, f);
+    Console.WriteLine($"Caso 3 (F,T,F) -> Obtenido: {garage3.Value}");
+        
+}
