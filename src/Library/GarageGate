@@ -1,0 +1,18 @@
+public class GarageGate : Logic
+{
+    private Logic circuito;
+
+    public GarageGate(Logic a, Logic b, Logic c)
+    {
+        Logic notA = new NotGate(a);
+        Logic notB = new NotGate(b);
+        Logic condicion1 = new AndGate(new AndGate(notA, notB), c);
+
+        Logic condicion2 = new Andgate(new Andgate(a, b), c);
+
+        circuito = new Orgate(condicion1, condicion2);
+    }
+
+    // al final simplemente se devuelve el valor del circuito
+    public bool Value => circuito.Value;
+}
